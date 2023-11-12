@@ -43,7 +43,7 @@ builder.Services.AddSwaggerGen(setupAction =>
 
 builder.Services.AddDbContext<UrlShortenerContext>(Options =>
 {
-    Options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
+    Options.UseSqlite(builder.Configuration.GetConnectionString("UrlShortenerDBConnectionString"));
 });
 
 builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntenticación que tenemos que elegir después en PostMan para pasarle el token
